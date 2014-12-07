@@ -1,5 +1,5 @@
 class ShoesController < ApplicationController
-  before_action :set_shoe, only: [:show, :edit, :update, :destroy]
+  before_action :set_shoe, only: [:show]
 
   # GET /shoes
   # GET /shoes.json

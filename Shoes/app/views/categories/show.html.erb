@@ -1,9 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @category.name %>
-</p>
 
-<%= link_to 'Edit', edit_category_path(@category) %> |
+<h1>Category: <%= @category.name%></h1>
+<%=render "shoes", shoes: @shoes %>
+<br>
 <%= link_to 'Back', categories_path %>

@@ -73,6 +73,6 @@ class Admin::ShoesController < Admin::AdminController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def shoe_params
-      params.require(:shoe).permit(:name, :category_id, :company_id, :description, :price)
+      params.require(:shoe).permit(:name, :category_id, :company_id, :description, :price, :cover)
     end
 end

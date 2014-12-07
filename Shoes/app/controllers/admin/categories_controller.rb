@@ -1,10 +1,10 @@
-class CategoriesController < ApplicationController
-  before_action :set_category, only: [:show, :edit, :update, :destroy]
+class Admin::CategoriesController < Admin::AdminController
+	before_action :set_category, only: [:show, :edit, :update, :destroy]
 
   # GET /categories
   # GET /categories.json
   def index
-    @shoes_a = Shoe.avaiable
+    @categories = Category.all
   end
 
   # GET /categories/1
@@ -65,7 +65,6 @@ class CategoriesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_category
       @category = Category.find(params[:id])
-      @shoes = @category.shoes.avaiable
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
