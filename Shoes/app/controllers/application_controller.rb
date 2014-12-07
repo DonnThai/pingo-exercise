@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   layout "user_app"
-  before_action :set_categories, :set_companies
+  before_action :set_categories, :set_companies, :authenticate_user!
 
   def set_categories
     @categories = Category.all

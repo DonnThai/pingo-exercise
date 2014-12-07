@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :users
+  root "main#home"
   resources :model_shoes
 
   resources :shoes, only: [:index, :show, :update]
