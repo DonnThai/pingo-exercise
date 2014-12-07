@@ -1,4 +1,5 @@
 class Shoe < ActiveRecord::Base
+	acts_as_commentable
 	belongs_to :category
 	belongs_to :company
 	validates :name, presence: true

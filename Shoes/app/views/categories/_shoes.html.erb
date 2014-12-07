@@ -2,7 +2,7 @@
 
   <tbody>
     <% shoes.each do |shoe| %>
-      <tr>
+      <div style="text-align: center;">
         <%= image_tag  shoe.cover.url(:medium) %>
         
           <div>Name: <%= shoe.name %></div>
@@ -11,7 +11,7 @@
           <div>Price: <%= shoe.price%></div>
         
         
-      </tr>
+      </div>
     <% end %>
   </tbody>
 </table>

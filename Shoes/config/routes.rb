@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root "main#home"
-  resources :model_shoes
+  root "shoes#index"
 
   resources :shoes, only: [:index, :show, :update]
 
@@ -9,8 +8,11 @@ Rails.application.routes.draw do
 
   resources :categories
 
+  resources :comments
   namespace :admin do
+    root "admin_shoes#index"
     resources :shoes
+    resources :categories
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
