@@ -16,7 +16,7 @@ class Admin::ShoesController < Admin::AdminController
   def new
     @shoe = Shoe.new
     @categories = Category.active
-    @company = Company.all
+    @companies = Company.all
   end
 
   # GET /shoes/1/edit

@@ -1,4 +1,5 @@
-<%= form_for @shoe, :url => admin_shoes_path, :html => { :multipart => true } do |f| %>
+<%form_url = @shoe.new_record? ? admin_shoes_path : admin_shoe_path(@shoe) %>
+<%= form_for @shoe, :url => form_url, :html => { :multipart => true } do |f| %>
   <% if @shoe.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@shoe.errors.count, "error") %> prohibited this shoe from being saved:</h2>

@@ -1,5 +1,5 @@
 class ShoesController < ApplicationController
-  before_action :set_shoe, only: [:show]
+  before_action :set_shoe, only: [:show, :update]
 
   # GET /shoes
   # GET /shoes.json
@@ -13,11 +13,6 @@ class ShoesController < ApplicationController
     @new_comment = Comment.new
     @comments = @shoe.comments.order("updated_at DESC")
   end
-
-
-  # POST /shoes
-  # POST /shoes.json
-
 
   private
     # Use callbacks to share common setup or constraints between actions.

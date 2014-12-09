@@ -2,16 +2,18 @@
 
   <tbody>
     <% shoes.each do |shoe| %>
-      <div style="text-align: center;">
+      <div style="float:left;">
         <%= image_tag  shoe.cover.url(:medium) %>
         
           <div>Name: <%= shoe.name %></div>
           <div>Company: <%= shoe.company.try(:name) %></div>
           <div>Description: <%= shoe.description %></div>
           <div>Price: <%= shoe.price%></div>
-        
+          <div><%= link_to 'Show', shoe%></div>
         
       </div>
     <% end %>
   </tbody>
+ 
 </table>
+<div > <%= link_to 'Back', categories_path %></div>
